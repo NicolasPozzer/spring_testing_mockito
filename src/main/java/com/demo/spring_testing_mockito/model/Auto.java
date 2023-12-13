@@ -6,9 +6,9 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 
-@Getter
-@Setter
+@Getter @Setter @ToString
 @Entity
 public class Auto {
 
@@ -25,14 +25,5 @@ public class Auto {
         this.id = id;
         this.marca = marca;
         this.modelo = modelo;
-    }
-
-    @Override
-    public String toString() {
-        return "Auto{" +
-                "id=" + id +
-                ", marca='" + marca + '\'' +
-                ", modelo='" + modelo + '\'' +
-                '}';
     }
 }
